@@ -41,6 +41,14 @@ export class AssetManagerFacade {
     }
 
     /**
+     * @param url The url of the video file
+     * @returns The created video element
+     */
+    public static loadVideo(url: string): HTMLVideoElement {
+        return this.assetManager.loadVideo(url);
+    }
+
+    /**
      * @param url The url of the image element to find
      * @returns the found image element
      */
@@ -62,5 +70,13 @@ export class AssetManagerFacade {
      */
     public static getFont(family: string): FontFace {
         return this.assetManager.getFont(family);
+    }
+
+    /**
+     * @param url The url of the video element to find
+     * @returns The found video element
+     */
+    public static getVideo(url: string): HTMLVideoElement {
+        return this.assetManager.getVideo(url);
     }
 }

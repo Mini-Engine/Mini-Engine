@@ -21,6 +21,7 @@ export * from "./component/rendering/TextRenderer";
 export * from "./component/rendering/MaskRenderer";
 export * from "./component/rendering/TiledTilemapRenderer";
 export * from "./component/rendering/TilemapRenderer";
+export * from "./component/rendering/VideoRenderer";
 export * from "./component/Animator";
 export * from "./component/AudioPlayer";
 export * from "./component/Camera";
