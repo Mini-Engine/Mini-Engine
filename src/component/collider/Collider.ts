@@ -5,6 +5,7 @@ import { ICollisionResolution, ICollider, ICollision, IPhysicsManager } from "an
 export interface CollisionData {
     resolution: ICollisionResolution;
     collider: ICollider;
+    localCollider: ICollider;
     gameObject: GameObject;
     /**
      * @return The GameObject to which this component belongs
@@ -79,6 +80,7 @@ export abstract class BaseCollider extends ColliderComponent implements Collider
         return {
             gameObject: this.gameObjectManager.findGameObjectById(collision.remoteCollider.group),
             collider: collision.remoteCollider,
+            localCollider: collision.localCollider,
             resolution: collision.resolution,
             getGameObject: function <T extends GameObject>(): T {
                 return this.gameObject as T;
